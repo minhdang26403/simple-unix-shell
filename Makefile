@@ -1,6 +1,5 @@
-# Makefile for the CS:APP Shell Lab
+# Makefile for the shell
 
-TEAM = NOBODY
 VERSION = 1
 DRIVER = ./sdriver.pl
 TSH = ./tsh
@@ -15,7 +14,7 @@ all: $(FILES)
 # Regression tests
 ##################
 
-# Run tests using the student's shell program
+# Run tests using the shell program
 test01:
 	$(DRIVER) -t traces/trace01.txt -s $(TSH) -a $(TSHARGS)
 test02:

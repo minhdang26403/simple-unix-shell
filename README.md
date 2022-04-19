@@ -10,6 +10,8 @@ A shell is an interactive command-line interpreter that runs programs on behalf 
 
 The first word in the command line can be either the name of a built-in command or the pathname of an executable file. The remaining words are command-line arguments.
 
+If the command line ends with an ampersand `”&”`, then the job runs in the *background*, meaning that the shell does not wait for the job to terminate before printing the prompt and awaiting the next command line. Otherwise, the job runs in the foreground, which means that the shell waits for the job to terminate before awaiting the next command line. Thus, at any point in time, at most one job can be running in the foreground.
+
 This shell supports the notion of *job control*, which allows users to move jobs back and forth between background and foreground, and to change the process state (running, stopped, or terminated) of the process in a job. Typing `ctrl-c` causes a SIGINT signal to be delivered to each process in the foreground job. The default action for SIGINT is to terminate the process. Similarly, typing `ctrl-z` causes a SIGTSTP signal to be delivered to each process in the foreground job. The default action for SIGTSTP is to place a process in the stopped state, where it remains until it is awakened by the receipt of a SIGCONT signal.
 
 This shell also supports the following built-in commands:

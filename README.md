@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a simple Unix shell that supports job control and executing executable files. This project is from the Introduction to Computer System course (CMU) that I self-study.
+This is a simple Unix shell that supports job control and executing executable files.
 
 ## Overview
 
